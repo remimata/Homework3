@@ -11,7 +11,7 @@
         <input
           class="like_button"
           type="image"
-          v-bind:src="image_like"
+          src="./likebutton.png"
           alt="like_button"
           v-on:click="IncreaseLike(post.id)"
         />
@@ -26,7 +26,6 @@ export default {
   name: "posts",
   data: function () {
     return {
-      image_like: require("@/../src/assets/likebutton.png"),
     };
   },
   computed: {
