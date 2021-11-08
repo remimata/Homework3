@@ -5,7 +5,7 @@
         <img v-bind:src="post.author.photo_profile" />
         <small>{{ post.create_date }}</small>
       </div>
-      <img v-bind:src="post.image" class="image" />
+      <img :src="post.image" class="image" />
       <p>{{ post.description }}</p>
       <div class="divlike">
         <input
@@ -26,7 +26,7 @@ export default {
   name: "posts",
   data: function () {
     return {
-      image_like: require("@/../src/images/likebutton.png"),
+      image_like: require("@/../src/assets/likebutton.png"),
     };
   },
   computed: {
