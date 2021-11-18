@@ -40,7 +40,7 @@ export default new Vuex.Store({
     },
     ResetLikes(state) {
       for (let i of state.posts) {
-        i.likes=0;
+        i.likes = 0;
       }
     },
   },
