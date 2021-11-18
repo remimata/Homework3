@@ -8,6 +8,15 @@
     <router-view />
   </div>
 </template>
+<script>
+export default {
+  created: function () {
+    this.$store.commit("SetPosts");
+  }
+
+}
+</script>
+
 
 <style lang="scss">
 #app {

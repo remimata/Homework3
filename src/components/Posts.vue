@@ -22,7 +22,6 @@
 </template>
 
 <script>
-
 export default {
   name: "posts",
   data: function () {
@@ -38,9 +37,6 @@ export default {
       this.$store.commit("IncreaseLike", id);
     },
   },
-  created: function () {
-    this.$store.commit("SetPosts");
-  }
 };
 </script>
 

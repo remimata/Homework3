@@ -1,11 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import $ from "jquery";
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    posts:[],
+    posts: [],
   },
   getters: {
     getPosts: (state) => {
@@ -26,7 +27,7 @@ export default new Vuex.Store({
     IncreaseLike(state, id) {
       state.posts[id].likes += 1;
     },
-    SetPosts (state){
+    SetPosts(state) {
       $.get({
         url: "https://api.jsonbin.io/b/616bf937aa02be1d445a969d/9",
         success: function (response) {
@@ -37,8 +38,12 @@ export default new Vuex.Store({
         },
       });
     },
+    ResetLikes(state) {
+      for (let i of state.posts) {
+        i.likes=0;
+      }
+    },
   },
   actions: {},
   modules: {},
 });
-

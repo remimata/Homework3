@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <button type="button" v-on:click="Reset_like()">Reset Likes !</button>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld,
-  },
+  methods: {
+    Reset_like: function(){
+      console.log("Hey");
+      this.$store.commit("ResetLikes");
+    }
+  }
+
 };
 </script>
+
+<style lang="scss" scoped>
+.home{
+  button{
+    width:250px;
+    height:100px;
+
+  }
+}
+</style>
