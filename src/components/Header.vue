@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/Main">Main</router-link>
+      <router-link to="/Main">Main</router-link>|
+      <router-link to="/Contact">Contact Us</router-link>
     </div>
     
   </div>
@@ -22,7 +23,6 @@ export default {
     display:flex;
     justify-content:center;
     width:100%;
-    background-color: red;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
