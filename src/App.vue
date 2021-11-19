@@ -19,5 +19,15 @@ export default {
 
 
 <style lang="scss">
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1778bd;
+}
 
 </style>

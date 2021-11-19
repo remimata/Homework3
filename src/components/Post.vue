@@ -1,68 +1,43 @@
 <template>
-  <section class="container">
-    <div class="post" v-for="post in postsList" :key="post.id">
-      <div class="post-header">
-        <img v-bind:src="post.author.photo_profile" />
-        <small>{{ post.create_date }}</small>
-      </div>
-      <img :src="post.image" class="image" />
-      <p>{{ post.description }}</p>
-      <div class="divlike">
-        <input
-          class="like_button"
-          type="image"
-          src="./likebutton.png"
-          alt="like_button"
-          v-on:click="IncreaseLike(post.id)"
-        />
-        <span>{{ post.likes }}</span>
-      </div>
+  <div class="post">
+    <div class="post-header">
+      <img v-bind:src="photo_profile" />
+      <small>{{ create_date }}</small>
     </div>
-  </section>
+    <img :src="image" class="image" />
+    <p>{{ description }}</p>
+    <div class="divlike">
+      <input
+        class="like_button"
+        type="image"
+        src="./likebutton.png"
+        alt="like_button"
+        v-on:click="IncreaseLike(id)"
+      />
+      <span>{{ likes }}</span>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "posts",
-  data: function () {
-    return {};
-  },
-  computed: {
-    postsList() {
-      return this.$store.state.posts;
+    props: {
+        id : Number,
+        photo_profile : String,
+        create_date  : String,
+        image : String,
+        description : String,
+        likes : Number,
     },
-  },
-  methods: {
+    methods: {
     IncreaseLike: function (id) {
       this.$store.commit("IncreaseLike", id);
     },
-  },
+  }
 };
 </script>
 
-<style>
-* {
-  font-family: "Open Sans", sans-serif;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #1778bd;
-}
-
-/* index.html */
-
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 80%;
-  background-color: white;
-  padding-top: 80px;
-  padding-bottom: 20px;
-}
+<style lang="scss" scoped>
 .post {
   display: flex;
   flex-direction: column;
