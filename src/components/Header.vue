@@ -23,6 +23,7 @@ export default {
     display:flex;
     justify-content:center;
     width:100%;
+    background-color: rgba(0, 0, 0, 0.719);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -37,7 +38,7 @@ export default {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #ffffff;
 
     &.router-link-exact-active {
       color: #42b983;
