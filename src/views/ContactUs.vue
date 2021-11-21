@@ -2,7 +2,7 @@
   <div id = 'contactUs'>
     <p id = 'title'>Contact Us</p>
     <div id = 'frame'>
-      <br><p class = 'type_mail'>Email : </p><p class = 'mail'> bestwadteam@ut.ee</p>
+      <br><p class = 'type_mail'>Email : </p><p class = 'mail'> contactPostIt@ut.ee</p>
       <br><p class = 'type_phone'>Phone number : </p><p class = 'phone'> 0874589132</p><br>
     </div>
   </div>
@@ -15,6 +15,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#contactUs
+{
+  display: flex;
+  flex-direction: column;
+  margin: 36px;
+}
 #title
 {
   text-align: center;
