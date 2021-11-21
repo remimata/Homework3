@@ -19,8 +19,7 @@ export default {
 {
   text-align: center;
   font-size: 50px;
-  font : bold;
-
+  font-weight : bold;
 }
 
 #frame

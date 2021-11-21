@@ -17,6 +17,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#title
+{
+  text-align: center;
+  font-size: 50px;
+  font-weight : bold;
+}
 
-
+p
+{
+  font-size: 20px;
+  font-weight : lighter;
+}
 </style>
