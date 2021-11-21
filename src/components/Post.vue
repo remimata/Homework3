@@ -2,7 +2,7 @@
   <div class="post">
     <div class="post-header">
       <img v-bind:src="photo_profile" />
-      <small>{{ create_date }}</small>
+      <small>{{create_date}}</small>
     </div>
     <img :src="image" class="image" />
     <p>{{ description }}</p>
@@ -21,14 +21,7 @@
 
 <script>
 export default {
-    props: {
-        id : Number,
-        photo_profile : String,
-        create_date  : String,
-        image : String,
-        description : String,
-        likes : Number,
-    },
+    props: ["id","photo_profile","create_date","image","description","likes"],
     methods: {
     IncreaseLike: function (id) {
       this.$store.commit("IncreaseLike", id);
